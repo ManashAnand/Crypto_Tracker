@@ -1,0 +1,25 @@
+
+.bannerContent{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 25;
+    justify-content: space-around;
+}
+.tagLine{
+    display: flex;
+    height: 40%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.headerTitle{
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: "Montserrat";
+}
+.headerTagLine{
+    color: darkgray;
+    text-transform: capitalize;
+    font-family: "Montserrat";
+}

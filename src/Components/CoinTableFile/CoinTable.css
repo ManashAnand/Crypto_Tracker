@@ -1,0 +1,21 @@
+.typoGraphy{
+    margin: 18px;
+    font-family: "Montserrat";
+    padding-bottom: 8px;
+}
+
+.textField:hover{
+    /* background-color: white;
+     */
+     border: 2px solid white;
+     border-radius: 4px;
+     cursor: pointer;
+}
+.individualItems{
+    background-color: #16171a;
+    cursor: pointer;
+    color: white;
+}
+.individualItems:hover{
+    background-color: #131111;
+}
