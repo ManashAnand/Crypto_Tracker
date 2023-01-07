@@ -1,0 +1,12 @@
+.googleBtn{
+    padding: 24px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20;
+    font-size: 20px;
+}
+.or{
+    margin-bottom: 15px;
+}

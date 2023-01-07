@@ -11,10 +11,8 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import LinearProgress from '@mui/material/LinearProgress';
 import {useNavigate} from "react-router-dom";
-import { fontSize } from '@mui/system';
 import {numberWithCommas} from '../Banner/Carousel'
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
@@ -23,20 +21,13 @@ import Stack from '@mui/material/Stack';
 const CoinTable = () => {
     const navigate = useNavigate();
     
-    const [coins,setCoins]  =  useState([]);
-    const [loading,setLoading] = useState(false);
+    
     const [search,setSearch] = useState("");
     const [page,setPage] = useState(1);
 
-    const {currency,symbol} = CryptoToContext();
+    const {currency,symbol,coins,loading,fetchCoins} = CryptoToContext();
 
-    const fetchCoins = async () => {
-        setLoading(true);
-        const data = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=100&page=1&sparkline=false`);
-        const JsonData = await data.json();
-        setCoins(JsonData);
-        setLoading(false);
-    }
+   
     useEffect(()=>{
         fetchCoins();
     },[currency])

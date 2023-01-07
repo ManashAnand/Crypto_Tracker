@@ -8,10 +8,12 @@ import {useNavigate} from "react-router-dom";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import React from 'react';
 import {CryptoToContext} from '../CryptoContext'
+import AuthModel from './Authentication/AuthModel';
+import UserSidebar from './Authentication/UserSidebar';
 
 const Header = () => {
-  const {currency,setCurrency} = CryptoToContext();
-  console.log(currency)
+  const {currency,setCurrency,user} = CryptoToContext();
+ 
   const darkTheme = createTheme({
     palette: {
       primary:{
@@ -42,6 +44,8 @@ const Header = () => {
                 <MenuItem value={'USD'}>USD</MenuItem>
                 <MenuItem value={'INR'}>INR</MenuItem>
               </Select>
+          {  user ? <UserSidebar/> : <AuthModel/>}
+       
           </Toolbar>
         </Container>
       </AppBar>

@@ -33,6 +33,23 @@
     width: 100%;
     
 }
+
+.watchList{
+    width: 90%;
+    height: 40px;
+    background-color: #EEBC1D;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.watchList:active{
+    transform: scale(0.97);
+}
+
 @media only screen and (max-width: 768px) {
     .container{
         flex-direction: column;
@@ -45,5 +62,7 @@
         display: flex;
         justify-content: space-around;
     }
-
+    .watchList{
+        max-width: 20%;
+    }
   }
